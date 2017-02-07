@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Tue Feb  7 23:52:07 2017
+!Time: Tue Feb  7 23:57:50 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -14,6 +14,8 @@ vdc cleur-02 id 1
   limit-resource u6route-mem minimum 96 maximum 96
   limit-resource m4route-mem minimum 58 maximum 58
   limit-resource m6route-mem minimum 8 maximum 8
+
+feature interface-vlan
 
 no password strength-check
 username admin password 5 $5$hiE55oE4$T4n64UXQxd9w56DhGLJ/g0LAPAOB.H/H5VJXbT1jC7C  role network-admin
@@ -31,6 +33,8 @@ vlan 1
 
 vrf context management
   ip route 0.0.0.0/0 10.10.10.254
+
+interface Vlan1
 
 interface Ethernet1/1
 
