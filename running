@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Tue Feb  7 23:57:50 2017
+!Time: Tue Feb 14 22:08:47 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -15,6 +15,9 @@ vdc cleur-02 id 1
   limit-resource m4route-mem minimum 58 maximum 58
   limit-resource m6route-mem minimum 8 maximum 8
 
+feature nxapi
+feature bash-shell
+feature bgp
 feature interface-vlan
 
 no password strength-check
@@ -29,7 +32,9 @@ rmon event 3 description ERROR(3) owner PMON@ERROR
 rmon event 4 description WARNING(4) owner PMON@WARNING
 rmon event 5 description INFORMATION(5) owner PMON@INFO
 
-vlan 1
+vlan 1,300
+vlan 300
+  name se-vlan
 
 vrf context management
   ip route 0.0.0.0/0 10.10.10.254
@@ -37,6 +42,7 @@ vrf context management
 interface Vlan1
 
 interface Ethernet1/1
+  no shutdown
 
 interface Ethernet1/2
 
@@ -59,6 +65,7 @@ interface mgmt0
   ip address 10.10.10.52/24
 line console
 line vty
+router bgp 65000
 event manager applet writer
   event cli match "copy running-config startup-config"
   action 1 cli copy running bootflash:autoconfig/adriani/running.latest
