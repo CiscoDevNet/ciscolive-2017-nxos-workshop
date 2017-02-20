@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Feb 20 13:41:32 2017
+!Time: Mon Feb 20 13:42:49 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -17,11 +17,7 @@ vdc cleur-02 id 1
 
 feature nxapi
 feature bash-shell
-feature vrrp
 feature bgp
-feature interface-vlan
-feature lacp
-feature dhcp
 
 no password strength-check
 username admin password 5 $5$hiE55oE4$T4n64UXQxd9w56DhGLJ/g0LAPAOB.H/H5VJXbT1jC7C  role network-admin
@@ -39,14 +35,8 @@ vlan 1,300
 vlan 300
   name se-vlan
 
-service dhcp
-ip dhcp relay
-ipv6 dhcp relay
 vrf context management
   ip route 0.0.0.0/0 10.10.10.254
-
-
-interface Vlan1
 
 interface Ethernet1/1
   no shutdown
