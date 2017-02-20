@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Feb 20 14:08:27 2017
+!Time: Mon Feb 20 14:30:19 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
