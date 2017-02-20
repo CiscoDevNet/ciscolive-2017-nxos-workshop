@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Feb 20 16:16:10 2017
+!Time: Mon Feb 20 16:24:17 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -17,6 +17,7 @@ vdc cleur-01 id 1
 
 feature nxapi
 feature bash-shell
+feature vrrp
 
 no password strength-check
 username admin password 5 $5$hiE55oE4$T4n64UXQxd9w56DhGLJ/g0LAPAOB.H/H5VJXbT1jC7C  role network-admin
