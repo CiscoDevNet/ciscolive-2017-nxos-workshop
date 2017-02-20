@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Feb 20 10:05:22 2017
+!Time: Mon Feb 20 10:30:32 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -20,7 +20,6 @@ feature bash-shell
 feature vrrp
 feature tacacs+
 feature bgp
-feature udld
 feature interface-vlan
 feature lacp
 feature dhcp
