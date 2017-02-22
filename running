@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Wed Feb 22 09:39:30 2017
+!Time: Wed Feb 22 11:08:43 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -16,6 +16,8 @@ vdc cleur-01 id 1
   limit-resource m6route-mem minimum 8 maximum 8
 
 feature bash-shell
+feature bgp
+feature lacp
 
 no password strength-check
 username admin password 5 $5$hiE55oE4$T4n64UXQxd9w56DhGLJ/g0LAPAOB.H/H5VJXbT1jC7C  role network-admin
