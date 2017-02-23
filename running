@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Thu Feb 23 09:56:50 2017
+!Time: Thu Feb 23 15:27:09 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -68,7 +68,7 @@ line vty
 event manager applet writer
   event cli match "copy running-config startup-config"
   action 1 cli copy running bootflash:autoconfig/adriani/running.latest
-  action 2 cli guestshell run python '/home/guestshell/ciscolive-2017-nxos-workshop/config.py'
+  action 2 cli guestshell run python '/home/guestshell/ciscolive-2017-nxos-workshop/config.py
   action 3 event-default
 
 
