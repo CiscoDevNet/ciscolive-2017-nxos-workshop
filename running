@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Thu Feb 23 08:32:29 2017
+!Time: Thu Feb 23 09:18:52 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -16,8 +16,6 @@ vdc nxosv-9k-00 id 1
   limit-resource m6route-mem minimum 8 maximum 8
 
 feature nxapi
-feature vrrp
-feature tacacs+
 feature bgp
 feature udld
 feature interface-vlan
