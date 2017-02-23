@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Thu Feb 23 09:24:22 2017
+!Time: Thu Feb 23 09:56:50 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -16,10 +16,7 @@ vdc nxosv-9k-00 id 1
   limit-resource m6route-mem minimum 8 maximum 8
 
 feature nxapi
-feature bgp
-feature udld
 feature interface-vlan
-feature lacp
 feature dhcp
 
 no password strength-check
@@ -34,15 +31,7 @@ rmon event 3 description ERROR(3) owner PMON@ERROR
 rmon event 4 description WARNING(4) owner PMON@WARNING
 rmon event 5 description INFORMATION(5) owner PMON@INFO
 
-vlan 1,100,200,300,400
-vlan 100
-  name CLEUR01
-vlan 200
-  name CLEUR02
-vlan 300
-  name CLEUR03
-vlan 400
-  name CLEUR04
+vlan 1
 
 service dhcp
 ip dhcp relay
@@ -76,12 +65,10 @@ interface mgmt0
   ip address 10.10.120.9/24
 line console
 line vty
-router bgp 65000
-  router-id 1.1.1.1
 event manager applet writer
   event cli match "copy running-config startup-config"
   action 1 cli copy running bootflash:autoconfig/adriani/running.latest
-  action 2 cli guestshell run python '/home/guestshell/ciscolive-2017-nxos-workshop/config.py
+  action 2 cli guestshell run python '/home/guestshell/ciscolive-2017-nxos-workshop/config.py'
   action 3 event-default
 
 
