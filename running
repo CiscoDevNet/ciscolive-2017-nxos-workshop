@@ -1,12 +1,12 @@
 
 !Command: show running-config
-!Time: Thu Feb 23 15:30:25 2017
+!Time: Wed Mar  8 22:42:47 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
 
-switchname nxosv-9k-00
-vdc nxosv-9k-00 id 1
+hostname CLANZ-06
+vdc CLANZ-06 id 1
   limit-resource vlan minimum 16 maximum 4094
   limit-resource vrf minimum 2 maximum 4096
   limit-resource port-channel minimum 0 maximum 511
@@ -15,18 +15,12 @@ vdc nxosv-9k-00 id 1
   limit-resource m4route-mem minimum 58 maximum 58
   limit-resource m6route-mem minimum 8 maximum 8
 
-feature nxapi
-feature bgp
-feature interface-vlan
-feature lacp
-feature dhcp
-
 no password strength-check
-username admin password 5 $5$OHJAAN$JH0AUa3V5qrKMNYh/voqRk0ZEdrYEHNx5nVlmCzkfs8  role network-admin
+username admin password 5 $5$hiE55oE4$T4n64UXQxd9w56DhGLJ/g0LAPAOB.H/H5VJXbT1jC7C  role network-admin
 ssh key rsa 2048 
 ip domain-lookup
 system default switchport shutdown
-snmp-server user admin auth md5 0xd8ad6acfb4e7630d24968a96d165e948 priv 0xd8ad6acfb4e7630d24968a96d165e948 localizedkey engineID 128:0:0:9:3:0:80:86:148:94:68
+snmp-server user admin auth md5 0xae4227729a7f10854644e3320075583d priv 0xae4227729a7f10854644e3320075583d localizedkey engineID 128:0:0:9:3:0:80:86:144:42:34
 rmon event 1 description FATAL(1) owner PMON@FATAL
 rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
 rmon event 3 description ERROR(3) owner PMON@ERROR
@@ -35,16 +29,11 @@ rmon event 5 description INFORMATION(5) owner PMON@INFO
 
 vlan 1
 
-service dhcp
-ip dhcp relay
-ipv6 dhcp relay
 vrf context management
-  ip route 0.0.0.0/0 10.10.120.254
-
-
-interface Vlan1
+  ip route 0.0.0.0/0 10.10.10.254
 
 interface Ethernet1/1
+  no shutdown
 
 interface Ethernet1/2
 
@@ -64,7 +53,7 @@ interface Ethernet1/9
 
 interface mgmt0
   vrf member management
-  ip address 10.10.120.9/24
+  ip address 10.10.10.66/24
 line console
 line vty
 event manager applet writer
