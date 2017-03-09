@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Thu Mar  9 22:22:52 2017
+!Time: Thu Mar  9 22:23:55 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -17,8 +17,6 @@ vdc CLANZ-07 id 1
 
 feature bash-shell
 feature vrrp
-feature bgp
-feature lacp
 
 no password strength-check
 username admin password 5 $5$hiE55oE4$T4n64UXQxd9w56DhGLJ/g0LAPAOB.H/H5VJXbT1jC7C  role network-admin
