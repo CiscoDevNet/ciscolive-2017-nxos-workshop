@@ -1,12 +1,12 @@
 
 !Command: show running-config
-!Time: Wed Mar  8 22:43:44 2017
+!Time: Thu Mar  9 22:22:52 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
 
-hostname CLANZ-06
-vdc CLANZ-06 id 1
+hostname CLANZ-07
+vdc CLANZ-07 id 1
   limit-resource vlan minimum 16 maximum 4094
   limit-resource vrf minimum 2 maximum 4096
   limit-resource port-channel minimum 0 maximum 511
@@ -15,6 +15,8 @@ vdc CLANZ-06 id 1
   limit-resource m4route-mem minimum 58 maximum 58
   limit-resource m6route-mem minimum 8 maximum 8
 
+feature bash-shell
+feature vrrp
 feature bgp
 feature lacp
 
@@ -56,7 +58,7 @@ interface Ethernet1/9
 
 interface mgmt0
   vrf member management
-  ip address 10.10.10.66/24
+  ip address 10.10.10.67/24
 line console
 line vty
 event manager applet writer
