@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Jun 26 21:34:11 2017
+!Time: Mon Jun 26 21:39:09 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -19,10 +19,11 @@ feature nxapi
 feature interface-vlan
 
 no password strength-check
-username admin password 5 $5$OHJAAN$JH0AUa3V5qrKMNYh/voqRk0ZEdrYEHNx5nVlmCzkfs8  role network-admin
+username admin password 5 $5$PK02dZ7f$G9Vtj9MStHizT5HfS7hg5kmdzhH/qhfEBZTfzNaUDA2  role network-admin
 ssh key rsa 2048 
 ip domain-lookup
 system default switchport shutdown
+snmp-server user admin network-admin auth md5 0x06f1cfae2b57876b18c409bd0ad76791 priv 0x06f1cfae2b57876b18c409bd0ad76791 localizedkey
 snmp-server user admin auth md5 0xd8ad6acfb4e7630d24968a96d165e948 priv 0xd8ad6acfb4e7630d24968a96d165e948 localizedkey engineID 128:0:0:9:3:0:80:86:148:94:68
 rmon event 1 description FATAL(1) owner PMON@FATAL
 rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
