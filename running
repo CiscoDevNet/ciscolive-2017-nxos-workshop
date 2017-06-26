@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Jun 26 21:39:09 2017
+!Time: Mon Jun 26 23:37:41 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -16,7 +16,9 @@ vdc nxosv-9k-00 id 1
   limit-resource m6route-mem minimum 8 maximum 8
 
 feature nxapi
+feature bgp
 feature interface-vlan
+feature lacp
 
 no password strength-check
 username admin password 5 $5$PK02dZ7f$G9Vtj9MStHizT5HfS7hg5kmdzhH/qhfEBZTfzNaUDA2  role network-admin
