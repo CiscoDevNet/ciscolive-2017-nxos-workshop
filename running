@@ -1,6 +1,6 @@
 
 !Command: show running-config
-!Time: Mon Jun 26 21:21:35 2017
+!Time: Mon Jun 26 21:34:11 2017
 
 version 7.0(3)I5(1)
 power redundancy-mode combined force
@@ -16,10 +16,7 @@ vdc nxosv-9k-00 id 1
   limit-resource m6route-mem minimum 8 maximum 8
 
 feature nxapi
-feature bgp
 feature interface-vlan
-feature lacp
-feature dhcp
 
 no password strength-check
 username admin password 5 $5$OHJAAN$JH0AUa3V5qrKMNYh/voqRk0ZEdrYEHNx5nVlmCzkfs8  role network-admin
@@ -35,12 +32,8 @@ rmon event 5 description INFORMATION(5) owner PMON@INFO
 
 vlan 1
 
-service dhcp
-ip dhcp relay
-ipv6 dhcp relay
 vrf context management
   ip route 0.0.0.0/0 10.10.120.254
-
 
 interface Vlan1
 
